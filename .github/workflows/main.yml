@@ -5,6 +5,9 @@ on:
   # 2
   push:
     branches: [ "main" ]
+    tags:
+      - "v*.*.*"
+
   pull_request:
     branches: [ "main" ]
 
