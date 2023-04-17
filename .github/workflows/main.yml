@@ -40,3 +40,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Start release build
         run: flutter build apk
+      
+      - name: Upload Android Release
+        uses: actions/upload-artifact@v2
+        with:
+          name: android-release
+          path: build/app/outputs/flutter-apk/app-release.apk
