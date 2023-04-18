@@ -1,29 +1,30 @@
 name: Android Release
 
-# 1
+
 on:
-  # 2
+  
   push:
     branches: [ "main" ]
-    tags:
-      - "v*.*.*"
 
   pull_request:
     branches: [ "main" ]
 
-  # 3
+  
   workflow_dispatch:
 
-# 4
+permissions:
+  contents: write
+  
+
 jobs:
-  # 5
+  
   build:
-    # 6
+    
     runs-on: ubuntu-latest
 
-    # 7
+    
     steps:
-      # 8
+      
       - uses: actions/checkout@v3
       # 9
       - uses: actions/setup-java@v3
